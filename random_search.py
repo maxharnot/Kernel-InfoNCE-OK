@@ -53,7 +53,7 @@ def random_search():
     parser.add_argument("--gaussian_blur", action="store_true", help="add gaussian blur")
     parser.add_argument("--jitter_strength", type=float, default=1.0, help="jitter strength")
     parser.add_argument("--dataset", type=str, default="cifar10", help="stl10, cifar10")
-    parser.add_argument("--data_dir", type=str, default="/home/yjq/graph", help="path to download data")
+    parser.add_argument("--data_dir", type=str, default="./graph", help="path to download data")
 
     # training params
     parser.add_argument("--fast_dev_run", default=1, type=int)
