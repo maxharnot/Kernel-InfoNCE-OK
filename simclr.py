@@ -273,5 +273,5 @@ model = SimCLR(num_samples=dm.num_samples, batch_size=dm.batch_size, dataset='ci
                learning_rate=1.5, temperature=0.5)
 
 # fit
-trainer = pl.Trainer()
+trainer = pl.Trainer(log_every_n_steps=1)
 trainer.fit(model, datamodule=dm)
