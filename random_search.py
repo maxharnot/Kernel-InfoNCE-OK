@@ -94,7 +94,7 @@ def random_search():
     tuner = tune.Tuner(
         tune.with_resources(
             tune.with_parameters(simclr_module.cli_main, args=args, isTune=True),
-            resources={"cpu": 2, "gpu": 1}
+            resources={"cpu": 16, "gpu": 0}
         ),
         tune_config=tune.TuneConfig(
             metric="online_val_acc",
