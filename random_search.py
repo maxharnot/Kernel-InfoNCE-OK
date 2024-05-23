@@ -103,7 +103,7 @@ def random_search():
             num_samples=num_samples,
         ),
         run_config=ray.air.RunConfig(
-          local_dir="~/ray_results"
+          local_dir="/Users/maxharnot/Projects/Studies/PracticalCourse/Kernel-InfoNCE-OK/results/ray_results"
         ),
         param_space=search_params,
     )
