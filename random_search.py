@@ -26,7 +26,9 @@ from ray.air import session
 from ray.air.checkpoint import Checkpoint
 from ray.tune.schedulers import ASHAScheduler
 import simclr_module
+import logging
 
+logging.basicConfig(filename='bug_report', level= logging.DEBUG)
 
 def random_search():
     parser = ArgumentParser()
@@ -103,7 +105,7 @@ def random_search():
             num_samples=num_samples,
         ),
         run_config=ray.air.RunConfig(
-          local_dir="/Users/maxharnot/Projects/Studies/PracticalCourse/Kernel-InfoNCE-OK/results/ray_results"
+          local_dir=os.path.expanduser("~/ray_results")
         ),
         param_space=search_params,
     )

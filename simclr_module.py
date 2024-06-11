@@ -537,6 +537,7 @@ def cli_main(config, args, isTune=False):
         precision=32 if args.fp32 else 16,
         callbacks=callbacks,
         fast_dev_run=args.fast_dev_run,
+        log_every_n_steps=1,
     )
 
     trainer.fit(model, datamodule=dm)
